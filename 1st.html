@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Avinash JS</title>
+    <style>
+        html, body, #viewDiv
+        {
+            padding: 0;
+            margin: 0;
+            height: 100%;
+            width: 100%;
+        }
+    </style>
+    <link rel="stylesheet" href="https://js.arcgis.com/4.4esri/css/main.css">
+    <script src="https://js.arcgis.com/4.4"></script>
+</head>
+
+<body>
+    <script>
+        require(["esri/views/MapView", "esri/WebMap", "dojo/domReady!"],
+    function (MapView, WebMap) {
+        var webmap = new WebMap({ basemap: "topo" });
+        var view = new MapView({ map: webmap, container: "viewDiv" });
+    });
+    </script>
+    <div id="viewDiv">
+    </div>
+</body>
+</html>
